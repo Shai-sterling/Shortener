@@ -33,6 +33,13 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
+
+group :development, :test do
+  # Use for testing specs
+  gem 'rspec-rails', '~> 5.0', '>= 5.0.2'
+
+end
+
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 4.1.0'
