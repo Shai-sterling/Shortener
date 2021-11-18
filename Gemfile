@@ -37,6 +37,13 @@ end
 group :development, :test do
   # Use for testing specs
   gem 'rspec-rails', '~> 5.0', '>= 5.0.2'
+end
+
+group :test do
+  # Use for brower simulations. This shows how a user interacts with a web appliction.
+  gem 'capybara', '~> 3.36'
+  # Use to support all browers when simulating browers interactions 
+  gem 'webdrivers', '~> 5.0', require: false
 
 end
 
