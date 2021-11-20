@@ -12,4 +12,12 @@ RSpec.describe type: :system do
 
 
 
+    it "has valid url" do
+        visit new_link_path 
+        fill_in "Original url", with: "https://www.bachelorsportal.com/search/bachelor"
+        click_button "Create Link"
+    end
+
+
+
 end
