@@ -31,6 +31,14 @@ class LinksController < ApplicationController
 
 
 
+    def send_to_website
+
+        link = Link.find(params[:id])
+
+        redirect_to link.original_url
+
+        #link.set_click
+    end
 
 
 
