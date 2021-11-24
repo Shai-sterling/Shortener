@@ -1,7 +1,16 @@
 class LinksController < ApplicationController
 
+    
 
     
+def index
+
+    @link = Link.all
+
+
+end
+
+
     def new
         @link = Link.new
     end
@@ -37,16 +46,16 @@ class LinksController < ApplicationController
 
         redirect_to link.original_url
 
-        #link.set_click
-    end
+        link.set_click
 
+    end
 
 
 
       private
 
       def link_params
-          params.require(:link).permit(:original_url, :short_url)
+          params.require(:link).permit(:original_url)
       end
   
   
