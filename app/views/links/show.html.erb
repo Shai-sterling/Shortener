@@ -2,7 +2,7 @@
 
 
 <div>
-    <p>Short URL: <%= link_to "http://localhost:3000/#{@link.short_url}" %></p>
+    <p>Short URL: <%= link_to "http://localhost:3000/#{@link.short_url}", send_to_website_path(@link) %></p>
 </div>
 
 <div>
