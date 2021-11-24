@@ -16,8 +16,6 @@ end
     end
 
 
-
-
     def create
 
         @link =  Link.new(link_params)
@@ -27,8 +25,7 @@ end
         else
             render "new"
         end
-        
-       
+         
     end
 
 
