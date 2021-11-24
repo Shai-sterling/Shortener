@@ -6,9 +6,10 @@ Rails.application.routes.draw do
 
 
   root "links#new"
-
+  
   resources :links
 
+  get "/:id", to: "links#send_to_website", as: "send_to_website"
 
 
 
