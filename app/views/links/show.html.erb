@@ -1,4 +1,10 @@
 
 
 
-<p>localhost:3000/</p>
+<div>
+    <p>Short URL: <%= link_to "http://localhost:3000/#{@link.short_url}" %></p>
+</div>
+
+<div>
+    <p>Original URL: <br> <%= @link.original_url %></p>
+</div>
