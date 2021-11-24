@@ -28,22 +28,37 @@ RSpec.describe type: :system do
         )
 
         expect(link.generate_code.length).to eq(7)
+
     end
 
 
 
   
-#   it "generates characters for an empty original url but dose not save" do
+  it "generates characters for an empty original url but dose not save" do
 
-#         link = Link.new(
-#             original_url: " ",
-#             short_url: " "
-#         )
+        link = Link.new(
+            original_url: " ",
+            short_url: " "
+        )
 
-#        link.short_url = link.generate_code 
+       link.short_url = link.generate_code 
 
-#         expect(link.save).to eq(false)
-#     end
+        expect(link.save).to eq(false)
+    end
+
+
+    it "has valid original url" do
+        visit new_link_path 
+        fill_in "Original url", with: "https://www.bachelorsportal.com/search/bachelor"
+        click_button "Create Link"
+        expect(page).to have_content("localhost:3000/")
+    end
+
+
+
+
+
+
 
     # it "generates 7 different characters for each given original url" do
 
@@ -60,14 +75,6 @@ RSpec.describe type: :system do
     #     expect(link_one.generate_code).to_not eq(link_two.generate_code)
     # end
 
-
-
-    # it "has valid original url" do
-    #     visit new_link_path 
-    #     fill_in "Original url", with: "https://www.bachelorsportal.com/search/bachelor"
-    #     click_button "Create Link"
-    #     expect(page).to have_content("localhost:3000/")
-    # end
 
   
 

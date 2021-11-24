@@ -23,6 +23,18 @@ class LinksController < ApplicationController
     end
 
 
+
+
+    def show
+        @link =  Link.find(params[:id])
+    end
+
+
+
+
+
+
+
       private
 
       def link_params
