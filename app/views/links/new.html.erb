@@ -1,18 +1,27 @@
 
 
+<br>
 
-<%= form_with model: @link do |form| %>
-<br>
-<br>
-<br>
-<br>
-<br>
+<%= form_with model: @link, remote: true do |form| %>
+
+    <% @link.errors.full_messages_for(:original_url).each do |msg| %>
+
+        <div>
+            <p><%= msg %></p>
+        </div>
+
+    <% end %>
+
     <div>
         <%= form.label :original_url %>
     </div>
 
     <div>
         <%= form.text_field :original_url %>
+    </div>
+
+    <div>
+        <%#= form.text_field :short_url %>
     </div>
 
     <div>
