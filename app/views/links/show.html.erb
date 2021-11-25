@@ -1,10 +1,7 @@
 
 
 
-<div>
-    <p>Short URL: <%= link_to "http://localhost:3000/#{@link.short_url}", send_to_website_path(@link) %></p>
+<div class="copy-url">
+    <p>Copy URL: <%= link_to "http://localhost:3000/#{@link.short_url}", send_to_website_path(@link) %></p>
 </div>
 
-<div>
-    <p>Original URL: <br> <%= @link.original_url %></p>
-</div>

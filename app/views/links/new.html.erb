@@ -1,32 +1,32 @@
 
 
-<br>
+<h1 class="paste-link">Paste your link</h1>
 
-<%= form_with model: @link, remote: true do |form| %>
+<div class="link-form-wrapper">
+    <%= form_with model: @link, remote: true do |form| %>
 
-    <% @link.errors.full_messages_for(:original_url).each do |msg| %>
+        <% @link.errors.full_messages_for(:original_url).each do |msg| %>
+
+            <div>
+                <p><%= msg %></p>
+            </div>
+
+        <% end %>
 
         <div>
-            <p><%= msg %></p>
+            <h2><%= form.label :URL %><h2>
         </div>
+
+        <div>
+            <%= form.text_field :original_url %>
+        </div>
+<br>
+
+        <div>
+            <%= form.submit "Shorten link", :class=>"shorten-link-btn"%>
+        </div>
+
 
     <% end %>
 
-    <div>
-        <%= form.label :original_url %>
-    </div>
-
-    <div>
-        <%= form.text_field :original_url %>
-    </div>
-
-    <div>
-        <%#= form.text_field :short_url %>
-    </div>
-
-    <div>
-        <%= form.submit %>
-    </div>
-
-
-<% end %>
+</div>
