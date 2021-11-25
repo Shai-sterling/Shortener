@@ -13,3 +13,53 @@
  *= require_tree .
  *= require_self
  */
+
+ .shortened-heading {
+
+    text-align: center;
+    width: 60%;
+    margin: auto;
+ }
+
+ 
+  .link-wrapper {
+     padding: 30px;
+    // background-color: rgb(242, 242, 255);
+     width: 60%;
+     margin: auto;
+ 
+  }
+
+
+
+
+ .link {
+
+    background-color: rgb(238, 235, 235);
+    margin-top: 20px;
+    overflow-x: scroll;
+    padding: 20px;
+    border-radius: 5px;
+
+
+ }
+
+
+
+
+ .new-link-btn {
+
+    background-color: rgb(7, 176, 255);
+    width: 20%;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.5em;
+    border-radius: 5px;
+    margin: auto;
+    
+    a {
+        text-decoration: none;
+        color: white;
+
+    }
+ }
