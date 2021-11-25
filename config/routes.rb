@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   
   resources :links
 
-  get "/:id", to: "links#send_to_website", as: "send_to_website"
+  get "/:short_url", to: "links#send_to_website", as: "send_to_website"
 
 
 

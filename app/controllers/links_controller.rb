@@ -1,14 +1,10 @@
 class LinksController < ApplicationController
 
+    before_action :set_link, only: [:show]
     
-
-    
-def index
-
-    @link = Link.all
-
-
-end
+    def index
+        @link = Link.all.order(created_at: "DESC")
+    end
 
 
     def new
@@ -29,31 +25,33 @@ end
     end
 
 
-
-
     def show
-        @link =  Link.find(params[:id])
     end
 
 
 
     def send_to_website
 
-        link = Link.find(params[:id])
+        link = Link.where(short_url: "#{params[:short_url]}").first
 
         redirect_to link.original_url
 
         link.set_click
-
     end
 
 
+    private
 
-      private
 
-      def link_params
-          params.require(:link).permit(:original_url)
-      end
-  
+    def set_link
+        @link =  Link.find(params[:id])
+    end
+
+    def link_params
+
+        params.require(:link).permit(:original_url)
+
+    end
+
   
 end

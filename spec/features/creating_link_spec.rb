@@ -18,7 +18,7 @@ RSpec.describe type: :system do
         visit new_link_path 
         fill_in "Original url", with: "https://www.bachelorsportal.com/search/bachelor"
         click_button "Shorten link"
-        expect(page).to have_content("http://localhost:3000/")
+        expect(page).to have_content("https://shai-shortener.herokuapp.com/")
     end
 
     it "generates 7 characters for a given original url" do
@@ -56,7 +56,7 @@ RSpec.describe type: :system do
         link_one.save
         link_two.save
 
-        expec(link_one.short_url.present?).to eq(true)
+        expect(link_one.short_url.present?).to eq(true)
         expect(link_two.short_url.present?).to eq(true)
         expect(link_one.short_url).to_not eq(link_two.short_url)
     end
