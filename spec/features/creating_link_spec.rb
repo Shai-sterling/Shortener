@@ -1,7 +1,5 @@
 require "rails_helper"
 
-
-
 RSpec.describe type: :system do
 
     it "Displays a form with url field" do
