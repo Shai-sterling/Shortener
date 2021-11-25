@@ -15,6 +15,9 @@ class Link < ApplicationRecord
      end
 
 
+     def urls
+         Link.where(original_url: self.original_url).count
+     end
 
     
     def generate_code

@@ -7,19 +7,26 @@
         <div class="link">
 
             <div>
+                <strong> Shortened URL</strong> 
+               <p> <%= link_to "https://shai-shorty.herokuapp.com/#{link.short_url}" %> </p>
+            </div>
+
+
+            <div>
                <strong> Original URL</strong> 
                <p><%= link.original_url %> </p>
             </div>
 
-            <div>
-                <strong> Shortened URL</strong> 
-               <p> <%= link.short_url %> </p>
-            </div>
 
             <div>
                 <strong> Visited </strong> 
 
-                  <%= link.clicked %> </p>
+                 <p> <%= link.clicked %> </p>
+            </div>
+            <div>
+                <strong>Shortening attempts </strong> 
+
+                  <p><%= link.urls %> </p>
             </div>
 
  

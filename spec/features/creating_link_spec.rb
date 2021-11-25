@@ -76,4 +76,52 @@ RSpec.describe type: :system do
         expect(page).to have_content("Shortened links") 
     end
 
+    it "returns number of urls with same original url" do
+
+        link_one = Link.new(
+            original_url: "https://www.example.com/books",
+            short_url: ""
+        )
+        link_two = Link.new(
+            original_url: "https://www.example.com/books",
+            short_url: ""
+        )
+        
+        link_one.save
+        link_two.save
+
+        expect(link_one.urls).to eq(2)
+    end
+   
+    it "should have only url with same original url" do
+
+        link = Link.new(
+            original_url: "https://www.example.com/books",
+            short_url: ""
+        )
+        
+        link.save
+
+        expect(link.urls).to eq(1)
+    end
+   
+    it "should have two of urls with same original url" do
+
+        link_one = Link.new(
+            original_url: "https://www.example.com/books",
+            short_url: ""
+        )
+        
+        link_two = Link.new(
+            original_url: "https://www.example.com/books",
+            short_url: ""
+        )
+        
+        link_one.save
+        link_two.save
+
+        expect(link_one.urls).to eq(2)
+    end
+   
+
 end
