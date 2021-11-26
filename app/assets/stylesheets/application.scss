@@ -25,6 +25,9 @@
     text-align: center;
     width: 60%;
     margin: auto;
+    margin-top: 80px;
+
+   
  }
 
  
@@ -55,7 +58,7 @@
 
  .new-link-btn {
 
-    background-color: rgb(7, 176, 255);
+    background-color: #1dc3e0;
     width: 20%;
     text-align: center;
     padding: 10px;
@@ -64,8 +67,11 @@
     margin: auto;
 
     a {
-        text-decoration: none;
+        text-decoration: none !important;
         color: white;
+        :visited {
+            color: white;
+        }
 
     }
  }
@@ -99,6 +105,7 @@
         background-color: #1dc3e0;
         border: none;
         font-size: 1em;
+
     }
 
  }
