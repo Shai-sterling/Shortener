@@ -20,23 +20,21 @@
       font-family: "Montserrat", sans-serif;
     }  
 
+    .logo {
+        width: 15%;
+    }
 
+    .shortened-heading {
 
- .logo {
-    width: 20%;
- }
- .shortened-heading {
-
-    text-align: center;
-    width: 60%;
-    margin: auto;
-    margin-top: 80px;
-
-   
- }
+        text-align: center;
+        width: 60%;
+        margin: auto;
+        margin-top: 80px;
+    }
 
  
   .link-wrapper {
+
      padding: 30px;
     // background-color: rgb(242, 242, 255);
      width: 60%;
@@ -44,86 +42,82 @@
  
   }
 
+    .form-error {
+        color: red;
+    }
 
-  .form-error{
-    color: red;
-  }
+    .link {
 
- .link {
+        background-color: rgb(238, 235, 235);
+        margin-top: 20px;
+        overflow-x: scroll;
+        padding: 20px;
+        border-radius: 5px;
 
-    background-color: rgb(238, 235, 235);
-    margin-top: 20px;
-    overflow-x: scroll;
-    padding: 20px;
-    border-radius: 5px;
+    }
 
- }
+    .new-link-btn {
 
+        background-color: #1dc3e0;
+        width: 20%;
+        text-align: center;
+        padding: 10px;
+        font-size: 1.5em;
+        border-radius: 5px;
+        margin: auto;
 
-
-
- .new-link-btn {
-
-    background-color: #1dc3e0;
-    width: 20%;
-    text-align: center;
-    padding: 10px;
-    font-size: 1.5em;
-    border-radius: 5px;
-    margin: auto;
-
-    a {
-        text-decoration: none !important;
-        color: white;
-        :visited {
+        a {
+            text-decoration: none !important;
             color: white;
+            :visited {
+                color: white;
+            }
+
+        }
+    }
+
+    .all-links-btn {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .paste-link {
+        text-align: center;
+        margin-top: 100px;
+        padding: 20px;
+    }
+
+    .link-form-wrapper {
+        background: rgb(247, 247, 247);
+        padding: 20px;
+        width: 70%;
+        margin: auto;
+
+        input[type="text"]{
+            width: 97%;
+            height: 40px;
+            border-radius: 5px;
+            padding: 5px;
+            font-size: 1em;
+            
+        }
+
+
+        .shorten-link-btn {
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            background-color: #1dc3e0;
+            border: none;
+            font-size: 1em;
+
         }
 
     }
- }
 
- .all-links-btn {
-     text-align: center;
-     padding: 20px;
- }
 
- .paste-link {
-     text-align: center;
-     margin-top: 100px;
-     padding: 20px;
- }
-
- .link-form-wrapper {
-    background: rgb(247, 247, 247);
-    padding: 20px;
-    width: 70%;
-    margin: auto;
-
-    input[type="text"]{
-        width: 97%;
-        height: 40px;
-        border-radius: 5px;
-        padding: 5px;
-        font-size: 1em;
-        
+    .visit-url {
+        background-color: #5be01d;
+        padding: 30px;
+        text-align: center;
     }
-
-
-    .shorten-link-btn {
-        color: rgb(255, 255, 255);
-        padding: 10px;
-        background-color: #1dc3e0;
-        border: none;
-        font-size: 1em;
-
-    }
-
- }
-
-
- .visit-url {
-     background-color: #5be01d;
-     padding: 30px;
-     text-align: center;
- }
 
