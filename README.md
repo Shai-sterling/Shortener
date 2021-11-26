@@ -51,7 +51,7 @@ $ rails server
 - Generates characters for a URL
 
 ```
-@link = { original_url: "http://example.com" }
+@link = Link.new(original_url: "http://example.com" )
 @link.generate_code #=> "9d45f56"
  
 ```
