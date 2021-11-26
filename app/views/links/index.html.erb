@@ -1,40 +1,39 @@
 
-<h1 class="shortened-heading">Shortened links</h1>
+    <h1 class="shortened-heading">Shortened links</h1>
 
-<br>
+    <br>
 
-<div class="new-link-btn">
-     <%= link_to "Shorten a link", new_link_path%>
-</div>
+    <div class="new-link-btn">
+        <%= link_to "Shorten a link", new_link_path%>
+    </div>
+    
 
-<div class="link-wrapper">
-    <% @link.each do |link| %>
-        <div class="link">
+    <div class="link-wrapper">
+        <% @link.each do |link| %>
+            <div class="link">
+                <div>
+                    <strong> Shortened URL</strong> 
+                <p> <%= link_to "https://shai-shorty.herokuapp.com/#{link.short_url}", send_to_website_path(link.short_url) %> </p>
+                </div>
 
-            <div>
-                <strong> Shortened URL</strong> 
-               <p> <%= link_to "https://shai-shorty.herokuapp.com/#{link.short_url}", send_to_website_path(link.short_url) %> </p>
+                <div>
+                <strong> Original URL</strong> 
+                <p><%= link.original_url %> </p>
+                </div>
+
+                <div>
+                    <strong> Visited </strong> 
+
+                    <p> <%= link.clicked %> </p>
+                </div>
+                
+                <div>
+                    <strong>Shortening attempts </strong> 
+
+                    <p><%= link.urls %> </p>
+                </div>
+
             </div>
-
-
-            <div>
-               <strong> Original URL</strong> 
-               <p><%= link.original_url %> </p>
-            </div>
-
-
-            <div>
-                <strong> Visited </strong> 
-
-                 <p> <%= link.clicked %> </p>
-            </div>
-            <div>
-                <strong>Shortening attempts </strong> 
-
-                  <p><%= link.urls %> </p>
-            </div>
-
-        </div>
-    <% end %>
-</div>
+        <% end %>
+    </div>
 
