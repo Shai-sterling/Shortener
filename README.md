@@ -66,7 +66,7 @@ $ rspec
 
 ## Usage
 
-* Go to localhos:3000
+* Go to localhost:3000
 * Paste URL. Example, https://www.google.com/search?q=ghana&sxsrf=AOaemvLEfdgYa7KSzC3BMO6HKjr-b4H9yQ%3A1637932417693&source=hp&ei=gd2gYeznJ4ySwbkP7eea0AM&iflsig=ALs-wAMAAAAAYaDrkVOoZKY2_vgl25hxhfuj2bicWVcm&ved=0ahUKEwisrK7fjbb0AhUMSTABHe2zBjoQ4dUDCAk&uact=5&oq=ghana&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECcyBQguEIAEMgsILhCABBDHARCvATIFCAAQgAQyBQgAEIAEMgUIABCABDIFCC4QgAQyBQgAEIAEMgUIABCABDIFCAAQgAQ6BwgjEOoCECc6CwguEIAEEMcBENEDOgsILhCABBDHARCjAlDoCVjsF2DgGWgCcAB4AYAB8wGIAYkGkgEFMi4zLjGYAQCgAQGwAQo&sclient=gws-wiz
 * Click Shorten link
 * Click shortened link and get redirected to URL
