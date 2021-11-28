@@ -17,7 +17,7 @@ This application shortens a URL and when clicked, it redirects you to the full U
 ## Technologies
 * Ruby 3.0.2
 * Rails 6.1.4.1
-* SQlite or Postgresql Databases
+* Sqlite or Postgresqldatabase
 * Rspec-Rails 5.0 or 5.0.2
 * Capybara 3.36
 * Webdriver 5.0
