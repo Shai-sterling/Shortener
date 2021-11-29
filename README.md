@@ -52,7 +52,7 @@ $ rails server
 
 ```
 @link = Link.new(original_url: "http://example.com" )
-@link.generate_code #=> "9d45f56"
+@link.start_generate_code #=> "9d45f56"
  
 ```
 

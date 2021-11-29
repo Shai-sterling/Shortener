@@ -27,7 +27,7 @@ RSpec.describe type: :system do
             original_url: "https://www.rubyguides.com/2015/03/ruby-random/"
         )
 
-        expect(link.generate_code.length).to eq(7)
+        expect(link.start_generate_code.length).to eq(7)
     end
 
     it "generates  characters for an empty original url but dose not save" do
@@ -37,7 +37,7 @@ RSpec.describe type: :system do
             short_url: " "
         )
 
-       link.short_url = link.generate_code 
+       link.short_url = link.start_generate_code 
         expect(link.save).to eq(false)
     end
 
