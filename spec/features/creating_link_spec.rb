@@ -93,7 +93,7 @@ RSpec.describe type: :system do
         expect(link_one.urls).to eq(2)
     end
    
-    it "should have only url with same original url" do
+    it "should have only one url with same original url" do
 
         link = Link.new(
             original_url: "https://www.example.com/books",
@@ -104,24 +104,95 @@ RSpec.describe type: :system do
 
         expect(link.urls).to eq(1)
     end
-   
-    it "should have two of urls with same original url" do
 
+
+
+    it "should have two of urls with same original url" do
+        
         link_one = Link.new(
             original_url: "https://www.example.com/books",
             short_url: ""
+            )
+            
+            link_two = Link.new(
+                original_url: "https://www.example.com/books",
+                short_url: ""
+                )
+                
+                link_one.save
+                link_two.save
+                
+                expect(link_one.urls).to eq(2)
+            end
+            
+    it "should have http protocol" do
+
+        # link = Link.new(
+        #     original_url: "www.example.com/books",
+        #     short_url: ""
+        # )
+        
+        # link.save
+
+        # expect(link.valid?).to eq(true)
+
+
+
+
+
+        visit new_link_path 
+        fill_in "Original url", with: "www.bachelorsportal.com/search/bachelor"
+        click_button "Shorten link"
+        expect(page).to have_content("Original url is invalid")
+
+
+
+
+
+
+
+
+        
+    end
+
+    it "does not have http or https protocol" do
+
+        link = Link.new(
+            original_url: "www.example.com/books",
+            short_url: ""
         )
         
-        link_two = Link.new(
+        link.save
+
+        expect(link.valid?).to eq(false)
+
+    end
+
+    it "has has http protocol" do
+
+        link = Link.new(
+            original_url: "http://www.example.com/books",
+            short_url: ""
+        )
+        
+        link.save
+
+        expect(link.valid?).to eq(true)
+
+    end
+
+    it "has has https protocol" do
+
+        link = Link.new(
             original_url: "https://www.example.com/books",
             short_url: ""
         )
         
-        link_one.save
-        link_two.save
+        link.save
 
-        expect(link_one.urls).to eq(2)
+        expect(link.valid?).to eq(true)
+
     end
-   
+    
 
 end

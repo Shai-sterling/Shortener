@@ -3,6 +3,8 @@ class Link < ApplicationRecord
 
     validates :original_url, presence: true, allow_blank: false
     before_create  :start_generate_code
+    validates :original_url, format: URI::regexp(%w[http https])
+
 
 
 
