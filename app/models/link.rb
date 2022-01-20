@@ -5,13 +5,6 @@ class Link < ApplicationRecord
     before_create  :start_generate_code
     validates :original_url, format: URI::regexp(%w[http https])
 
-
-
-
-
-
-
-
     def set_click
         self.increment!(:clicked, 1)
     end
@@ -30,8 +23,5 @@ class Link < ApplicationRecord
     def generate_code
         self.short_url = Digest::SHA256.hexdigest(self.original_url)[0..6]
     end
-
-
-
 
 end
